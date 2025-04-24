@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1FCDDB05-DAF5-4546-BC6E-3DF0AED3ABE6}|Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj|c:\\users\\admin\\desktop\\ss2_be\\base_be_bff\\base_be.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1FCDDB05-DAF5-4546-BC6E-3DF0AED3ABE6}|Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj|solutionrelative:base_be.infrastructure\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44D8DB64-4A0F-4550-9DB5-2D12156C2499}|Base_BE\\Base_BE.csproj|c:\\users\\admin\\desktop\\ss2_be\\base_be_bff\\base_be\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{44D8DB64-4A0F-4550-9DB5-2D12156C2499}|Base_BE\\Base_BE.csproj|solutionrelative:base_be\\dependencyinjection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{44D8DB64-4A0F-4550-9DB5-2D12156C2499}|Base_BE\\Base_BE.csproj|c:\\users\\admin\\desktop\\ss2_be\\base_be_bff\\base_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{44D8DB64-4A0F-4550-9DB5-2D12156C2499}|Base_BE\\Base_BE.csproj|solutionrelative:base_be\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Infrastructure\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Base_BE.Infrastructure\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Infrastructure\\DependencyInjection.cs",
+              "RelativeToolTip": "Base_BE.Infrastructure\\DependencyInjection.cs",
+              "ViewState": "AgIAACEAAAAAAAAAAAAhwCwAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T04:09:46.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DependencyInjection.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE\\DependencyInjection.cs",
+              "RelativeDocumentMoniker": "Base_BE\\DependencyInjection.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE\\DependencyInjection.cs",
+              "RelativeToolTip": "Base_BE\\DependencyInjection.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T04:10:13.677Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE\\appsettings.json",
+              "RelativeDocumentMoniker": "Base_BE\\appsettings.json",
+              "ToolTip": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE\\appsettings.json",
+              "RelativeToolTip": "Base_BE\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-24T04:09:01.956Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
