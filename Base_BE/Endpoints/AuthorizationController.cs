@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using Base_BE.Domain.Entities;
 using Base_BE.Helpers;
 using Base_BE.Infrastructure.Data;
 using Base_BE.ViewModels.Authorization;
@@ -7,10 +8,12 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Primitives;
 using Microsoft.IdentityModel.Tokens;
 using OpenIddict.Abstractions;
 using OpenIddict.Server.AspNetCore;
+using ServiceStack;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
 namespace Base_BE.Endpoints;
@@ -307,6 +310,18 @@ public class AuthorizationController(
                         }));
                 }
 
+                //kiểm tra vô hiệu hóa
+                if (user.Status?.ToLower() == "disable")
+                {
+                    return Forbid(
+                        authenticationSchemes: OpenIddictServerAspNetCoreDefaults.AuthenticationScheme,
+                        properties: new AuthenticationProperties(new Dictionary<string, string?>
+                        {
+                            [OpenIddictServerAspNetCoreConstants.Properties.Error] = Errors.InvalidGrant,
+                            [OpenIddictServerAspNetCoreConstants.Properties.ErrorDescription] = "The user account has been disabled."
+                        }));
+                }
+
                 // Xác thực mật khẩu của người dùng
                 var passwordCheckResult = await _signInManager.CheckPasswordSignInAsync(user, request.Password, lockoutOnFailure: false);
                 if (!passwordCheckResult.Succeeded)
@@ -319,6 +334,7 @@ public class AuthorizationController(
                             [OpenIddictServerAspNetCoreConstants.Properties.ErrorDescription] = "The password is incorrect."
                         }));
                 }
+                
             }
             else if (result is not null && result.Principal is not null)
             {
@@ -326,6 +342,16 @@ public class AuthorizationController(
                 if (t != null)
                 {
                     user = await _userManager.FindByIdAsync(t);
+                }
+                if (user.Status?.ToLower() == "disable")
+                {
+                    return Forbid(
+                        authenticationSchemes: OpenIddictServerAspNetCoreDefaults.AuthenticationScheme,
+                        properties: new AuthenticationProperties(new Dictionary<string, string?>
+                        {
+                            [OpenIddictServerAspNetCoreConstants.Properties.Error] = Errors.InvalidGrant,
+                            [OpenIddictServerAspNetCoreConstants.Properties.ErrorDescription] = "The user account has been disabled."
+                        }));
                 }
             }
             /*C***** end */
@@ -350,6 +376,17 @@ public class AuthorizationController(
                     {
                         [OpenIddictServerAspNetCoreConstants.Properties.Error] = Errors.InvalidGrant,
                         [OpenIddictServerAspNetCoreConstants.Properties.ErrorDescription] = "The user is no longer allowed to sign in."
+                    }));
+            }
+
+            if (user.Status?.ToLower() == "disable")
+            {
+                return Forbid(
+                    authenticationSchemes: OpenIddictServerAspNetCoreDefaults.AuthenticationScheme,
+                    properties: new AuthenticationProperties(new Dictionary<string, string?>
+                    {
+                        [OpenIddictServerAspNetCoreConstants.Properties.Error] = Errors.InvalidGrant,
+                        [OpenIddictServerAspNetCoreConstants.Properties.ErrorDescription] = "The user account has been disabled."
                     }));
             }
 
@@ -418,4 +455,93 @@ public class AuthorizationController(
                 yield break;
         }
     }
+    [Authorize(Policy = "admin")]
+    [HttpPost("~/admin/disable-account/{id}")]
+    public async Task<IResult> DisableAccount([FromRoute] string id, [FromServices] ApplicationDbContext dbContext)
+    {
+        var user = await _userManager.FindByIdAsync(id);
+        if (user == null)
+            return Results.NotFound(new
+            {
+                status = 404,
+                message = "User has voted in an active vote, cannot disable account."
+            });
+
+        var listVote = await dbContext.UserVotes.Where(x => x.UserId == id).Select(x => x.VoteId).ToListAsync();
+        if (!listVote.IsNullOrEmpty())
+        {
+            return Results.BadRequest(new
+            {
+                status = 404,
+                message = "User has voted in an active vote, cannot disable account."
+            });
+        }
+
+        bool res = false;
+        foreach (var item in listVote)
+        {
+            var vote = await dbContext.Votes.FindAsync(item);
+            if(vote?.Status == "1")
+            {
+                res = true;
+                break;
+            }
+        }
+
+        if (res) 
+        {
+            return Results.BadRequest(new
+            {
+                status = 404,
+                message = "User has voted in an active vote, cannot disable account."
+            });
+        } 
+
+        user.Status = "Disable";
+        var result = await _userManager.UpdateAsync(user);
+
+        if (!result.Succeeded)
+            return Results.BadRequest(new
+            {
+                status = 404,
+                message = "User has voted in an active vote, cannot disable account."
+            });
+
+        return Results.Ok(new
+        {
+            status = result.Succeeded,
+            message = "Disable user successfully"
+        });
+    }
+
+    [Authorize(Policy = "admin")]
+    [HttpPost("~/admin/active-account/{id}")]
+    public async Task<IResult> ActiveAccount([FromRoute] string id)
+    {
+        var user = await _userManager.FindByIdAsync(id);
+        if (user == null)
+            return Results.NotFound(new
+            {
+                status = 404,
+                message = "User has voted in an active vote, cannot disable account."
+            });
+
+        user.Status = "Active";
+        var result = await _userManager.UpdateAsync(user);
+
+
+        if (!result.Succeeded)
+            return Results.BadRequest(new
+            {
+                status = 404,
+                message = "User has voted in an active vote, cannot disable account."
+            });
+
+        return Results.Ok(new
+        {
+            status = result.Succeeded,
+            message = "User account has been Active successfully."
+        });
+    }
+
 }

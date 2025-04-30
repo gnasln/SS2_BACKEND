@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
 	<ItemGroup>
 		<PackageReference Include="Ardalis.GuardClauses" Version="4.5.0" />
@@ -12,12 +12,21 @@
 		<PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.9.1" />
 		<PackageReference Include="MediatR" Version="12.2.0" />
 		<PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+		<PackageReference Include="Nethereum.Web3" Version="4.26.0" />
 		<PackageReference Include="Npgsql" Version="8.0.3" />
 		<PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
 	</ItemGroup>
 
 	<ItemGroup>
 		<ProjectReference Include="..\NetHelper\NetHelper.csproj" />
+		<ProjectReference Include="..\Base_BE.Domain\Base_BE.Domain.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Dtos\" />
+	  <Folder Include="Position\" />
+	  <Folder Include="UserVoter\" />
+	  <Folder Include="Vote\" />
 	</ItemGroup>
 
 </Project>
