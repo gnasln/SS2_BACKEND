@@ -9,6 +9,7 @@ using Microsoft.IdentityModel.Tokens;
 using Quartz;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 using Ardalis.GuardClauses;
+using Base_BE.Domain.Entities;
 
 namespace Microsoft.Extensions.DependencyInjection;
 
@@ -30,7 +31,8 @@ public static class DependencyInjection
             options.UseOpenIddict();
         });
 
-        services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
+
+		services.AddScoped<IApplicationDbContext>(provider => provider.GetRequiredService<ApplicationDbContext>());
         // Register the Identity services.
         services.AddIdentity<ApplicationUser, IdentityRole>()
             .AddEntityFrameworkStores<ApplicationDbContext>()

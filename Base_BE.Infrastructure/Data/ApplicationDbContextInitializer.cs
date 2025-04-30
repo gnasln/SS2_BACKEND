@@ -6,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using OpenIddict.Abstractions;
 using System.Globalization;
+using Base_BE.Domain.Entities;
 using static OpenIddict.Abstractions.OpenIddictConstants;
 
 
@@ -168,8 +169,8 @@ namespace Base_BE.Infrastructure.Data
                     ClientSecret = "$,Zf.EXS@quyb}DYC8{@i]P{!?*J=k",
                     RedirectUris =
                     {
-                        //new Uri("ez.active.app"),
-                        //new Uri("ez.active.app/signin-callback.html")
+                        //new Uri(""),
+                        //new Uri("")
                     },
                     Permissions =
                     {
