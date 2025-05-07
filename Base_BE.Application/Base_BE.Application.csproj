@@ -23,10 +23,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Dtos\" />
 	  <Folder Include="Position\" />
-	  <Folder Include="UserVoter\" />
-	  <Folder Include="Vote\" />
 	</ItemGroup>
 
 </Project>
