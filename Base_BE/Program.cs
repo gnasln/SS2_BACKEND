@@ -96,7 +96,12 @@ app.UseHealthChecks("/healthz");
 app.UseHttpsRedirection();
 app.UseRouting();
 
-app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
+// Fix CORS configuration - cannot use AllowAnyOrigin with AllowCredentials
+app.UseCors(builder => builder
+    .SetIsOriginAllowed(_ => true) // For development only (replace with specific origins in production)
+    .AllowAnyHeader()
+    .AllowAnyMethod()
+    .AllowCredentials());
 
 app.UseAuthentication();
 app.UseMiddleware<AccountDisabledMiddleware>();

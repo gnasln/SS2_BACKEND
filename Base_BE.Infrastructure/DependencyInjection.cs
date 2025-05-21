@@ -132,6 +132,15 @@ public static class DependencyInjection
             })
             ;
 
+        // Add Google Authentication
+        services.AddAuthentication()
+            .AddGoogle(options =>
+            {
+                options.ClientId = configuration["Authentication:Google:ClientId"];
+                options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+                options.SaveTokens = true;
+            });
+
         return services;
     }
 }

@@ -543,5 +543,4 @@ public class AuthorizationController(
             message = "User account has been Active successfully."
         });
     }
-
 }
