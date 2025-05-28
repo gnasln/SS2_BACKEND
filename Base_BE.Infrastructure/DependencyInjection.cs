@@ -92,7 +92,7 @@ public static class DependencyInjection
 
                 // Register the signing and encryption credentials.
                 options
-                       //.AddDevelopmentEncryptionCertificate()
+                       .AddDevelopmentEncryptionCertificate()
                        .AddDevelopmentSigningCertificate()
                        .AddEncryptionKey(new SymmetricSecurityKey(Convert.FromBase64String("YWN0aXZlX3NpZ24ga2V5LiBLZWVwIGl0IHNlY3JldCE=")))
                        //.DisableAccessTokenEncryption()
@@ -138,6 +138,7 @@ public static class DependencyInjection
             {
                 options.ClientId = configuration["Authentication:Google:ClientId"];
                 options.ClientSecret = configuration["Authentication:Google:ClientSecret"];
+                options.CallbackPath = "/api/googleauth/callback";
                 options.SaveTokens = true;
             });
 

@@ -22,3 +22,16 @@ C:\Users\ADMIN\Desktop\SS2_BE\Base_BE_BFF\NetHelper\obj\Debug\net8.0\NetHelper.d
 C:\Users\ADMIN\Desktop\SS2_BE\Base_BE_BFF\NetHelper\obj\Debug\net8.0\refint\NetHelper.dll
 C:\Users\ADMIN\Desktop\SS2_BE\Base_BE_BFF\NetHelper\obj\Debug\net8.0\NetHelper.pdb
 C:\Users\ADMIN\Desktop\SS2_BE\Base_BE_BFF\NetHelper\obj\Debug\net8.0\ref\NetHelper.dll
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\bin\Debug\net8.0\NetHelper.deps.json
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\bin\Debug\net8.0\NetHelper.dll
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\bin\Debug\net8.0\NetHelper.pdb
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\NetHelper.csproj.AssemblyReference.cache
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\NetHelper.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\NetHelper.AssemblyInfoInputs.cache
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\NetHelper.AssemblyInfo.cs
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\NetHelper.csproj.CoreCompileInputs.cache
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\NetHelper.sourcelink.json
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\NetHelper.dll
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\refint\NetHelper.dll
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\NetHelper.pdb
+C:\Users\PC\Desktop\test be\SS2_BACKEND\NetHelper\obj\Debug\net8.0\ref\NetHelper.dll

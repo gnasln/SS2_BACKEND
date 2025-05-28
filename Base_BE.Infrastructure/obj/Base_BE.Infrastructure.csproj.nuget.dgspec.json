@@ -1,39 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj": {}
+    "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Application\\Base_BE.Application.csproj": {
+    "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Application\\Base_BE.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Application\\Base_BE.Application.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Application\\Base_BE.Application.csproj",
         "projectName": "Base_BE.Application",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Application\\Base_BE.Application.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Application\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Application\\Base_BE.Application.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Application\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\NetHelper\\NetHelper.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\NetHelper\\NetHelper.csproj"
+              "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Domain\\Base_BE.Domain.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Domain\\Base_BE.Domain.csproj"
+              },
+              "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\NetHelper\\NetHelper.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\NetHelper\\NetHelper.csproj"
               }
             }
           }
@@ -47,8 +44,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -70,9 +66,17 @@
               "target": "Package",
               "version": "[12.2.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
             "Microsoft.AspNetCore.Identity": {
               "target": "Package",
               "version": "[2.2.0, )"
+            },
+            "Nethereum.Web3": {
+              "target": "Package",
+              "version": "[4.26.0, )"
             },
             "Npgsql": {
               "target": "Package",
@@ -99,38 +103,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Domain\\Base_BE.Domain.csproj": {
+    "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Domain\\Base_BE.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Domain\\Base_BE.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Domain\\Base_BE.Domain.csproj",
         "projectName": "Base_BE.Domain",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Domain\\Base_BE.Domain.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Domain\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Domain\\Base_BE.Domain.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\NetHelper\\NetHelper.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\NetHelper\\NetHelper.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -142,12 +144,21 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -164,43 +175,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj": {
+    "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj",
         "projectName": "Base_BE.Infrastructure",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Infrastructure\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Infrastructure\\Base_BE.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Application\\Base_BE.Application.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Application\\Base_BE.Application.csproj"
+              "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Application\\Base_BE.Application.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Application\\Base_BE.Application.csproj"
               },
-              "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Domain\\Base_BE.Domain.csproj": {
-                "projectPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\Base_BE.Domain\\Base_BE.Domain.csproj"
+              "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Domain\\Base_BE.Domain.csproj": {
+                "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\Base_BE.Domain\\Base_BE.Domain.csproj"
               }
             }
           }
@@ -214,8 +219,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -225,11 +229,19 @@
               "target": "Package",
               "version": "[4.7.1.1, )"
             },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.16, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
               "version": "[8.0.4, )"
             },
@@ -248,10 +260,6 @@
               "version": "[8.0.1, )"
             },
             "MySql.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[8.0.2, )"
             },
@@ -292,32 +300,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\NetHelper\\NetHelper.csproj": {
+    "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\NetHelper\\NetHelper.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\NetHelper\\NetHelper.csproj",
+        "projectUniqueName": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\NetHelper\\NetHelper.csproj",
         "projectName": "NetHelper",
-        "projectPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\NetHelper\\NetHelper.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ADMIN\\Desktop\\SS2_BE\\Base_BE_BFF\\NetHelper\\obj\\",
+        "projectPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\NetHelper\\NetHelper.csproj",
+        "packagesPath": "C:\\Users\\PC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\PC\\Desktop\\test be\\SS2_BACKEND\\NetHelper\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\PC\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -335,8 +337,7 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        },
-        "SdkAnalysisLevel": "9.0.100"
+        }
       },
       "frameworks": {
         "net8.0": {
@@ -353,6 +354,10 @@
             "MediatR": {
               "target": "Package",
               "version": "[12.2.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.Google": {
+              "target": "Package",
+              "version": "[8.0.16, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -375,7 +380,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.408/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
