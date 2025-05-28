@@ -35,8 +35,17 @@ public static class DependencyInjection
         services.AddHostedService<QueuedHostedService>();
         //ket noi hop dong thong minh
         services.AddSingleton<SmartContractService>();
+
         //vo hieu hoa
         services.AddScoped<SignInManager<ApplicationUser>, CustomSignInManager>();
+
+
+        // Add FluentEmail with configuration settings
+   //      services
+   //          .AddFluentEmail("lengocsang2k4@gmail.com")
+			// .AddRazorRenderer()
+			// .AddSmtpSender("smtp.gmail.com", 587, "lengocsang2k4@gmail.com", "wmak huen cqwi puei");
+
 
         services.AddHealthChecks()
             .AddDbContextCheck<ApplicationDbContext>();

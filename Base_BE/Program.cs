@@ -87,7 +87,7 @@ if (app.Environment.IsDevelopment() || app.Configuration["EnableDumpEnv"] == "1"
     app.UseSwagger();
     app.UseSwaggerUI();
 
-    await app.InitializeDatabaseAsync();
+    // await app.InitializeDatabaseAsync();
 }
 
 
@@ -96,12 +96,7 @@ app.UseHealthChecks("/healthz");
 app.UseHttpsRedirection();
 app.UseRouting();
 
-// Fix CORS configuration - cannot use AllowAnyOrigin with AllowCredentials
-app.UseCors(builder => builder
-    .SetIsOriginAllowed(_ => true) // For development only (replace with specific origins in production)
-    .AllowAnyHeader()
-    .AllowAnyMethod()
-    .AllowCredentials());
+app.UseCors(builder => builder.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
 
 app.UseAuthentication();
 app.UseMiddleware<AccountDisabledMiddleware>();
