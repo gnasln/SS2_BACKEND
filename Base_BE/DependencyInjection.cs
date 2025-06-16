@@ -29,7 +29,7 @@ public static class DependencyInjection
         services.AddControllers();
         services.AddMemoryCache(); // Thêm dòng này để sử dụng MemoryCache
         services.AddSingleton<OTPService>();
-        services.AddScoped<IEmailSender, EmailSender>(); // Giả định bạn có một implementation của IEmailSender
+        services.AddTransient<IEmailSender, EmailSender>(); // Giả định bạn có một implementation của IEmailSender
         // Register the BackgroundTaskQueue service
         services.AddSingleton<IBackgroundTaskQueue, BackgroundTaskQueue>();
         services.AddHostedService<QueuedHostedService>();
